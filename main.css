@@ -1,0 +1,368 @@
+/* selektor gwiazdki - najsłabszy selektor, ale ma bardzo duży zasięg
+często resetujemy w nim paddingi, marginesy i box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  /* określa sposób obliczania paddingów i borderów */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Barlow;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Fraunces;
+  color: hsl(212, 27%, 19%);
+}
+p {
+  color: hsl(212, 27%, 19%);
+}
+
+.btn {
+  color: hsl(212, 27%, 19%);
+  text-decoration: none;
+  font-family: Fraunces;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* MENU------------------------------------------------------------------------------ */
+
+.pageHeader {
+  position: absolute;
+  width: 100%;
+  padding-top: 40px;
+}
+.pageNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0px auto;
+}
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+.navContainer a {
+  color: #fff;
+  text-decoration: none;
+}
+.navContainer li:last-child a {
+  text-transform: uppercase;
+  /* background-color: #6fcfff; */
+  background-color: #fff;
+  color: hsl(212, 27%, 19%);
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-family: Fraunces;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.4s;
+}
+.navContainer li:last-child a:hover {
+  background-color: #6fcfff;
+  color: white;
+}
+
+/* BANNER ----------------------------------------------------------------------------------------- */
+
+.pageBanner {
+  background-image: url("./images/desktop/image-header.jpg");
+  min-height: 800px;
+  background-size: cover;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 150px;
+}
+.bannerTitle {
+  margin-top: 150px;
+  font-size: 54px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+/* ABOUT --------------------------------------------------------------------------------------------------- */
+.pageAbout,
+.pageAudience {
+  display: flex;
+  min-height: 650px;
+}
+.aboutLeft,
+.audienceRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutLeft .info,
+.audienceRight .info {
+  width: 55%;
+}
+.info h3 {
+  font-size: 40px;
+}
+.info p {
+  margin: 35px 0px;
+  text-align: justify;
+}
+
+.aboutRight {
+  background-image: url("./images/desktop/image-transform.jpg");
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+}
+.audienceLeft {
+  background-image: url("./images/desktop/image-stand-out.jpg");
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+}
+
+.btnYellow {
+  position: relative;
+}
+
+.btnYellow::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 225, 52);
+  height: 12px;
+  width: 100%;
+  z-index: -1;
+  bottom: -4px;
+  border-radius: 50px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.btnYellow:hover::before {
+  opacity: 1;
+}
+
+.btnPink {
+  position: relative;
+}
+
+.btnPink::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(216, 94, 94);
+  height: 12px;
+  width: 100%;
+  z-index: -1;
+  bottom: -4px;
+  border-radius: 50px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.btnPink:hover::before {
+  opacity: 1;
+}
+
+/* DESIGN---------- */
+
+.pageDesign {
+  display: flex;
+  min-height: 600px;
+}
+
+.pageDesign .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  background-position: top;
+  background-size: cover;
+  padding: 30px 50px;
+  text-align: center;
+}
+.pageDesign .box h4 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.pageDesign .textBox {
+  min-height: 120px;
+}
+
+.designLeft {
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+}
+.designRight {
+  background-image: url(./images/desktop/image-photography.jpg);
+}
+
+/* CLIENT TESTIMONIALS---------------------- */
+.pageTestimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 0;
+}
+
+.pageTestimonials > h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: 900;
+  color: hsl(210, 4%, 67%);
+  margin-bottom: 80px;
+}
+
+.testimonialsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial {
+  text-align: center;
+  width: 320px;
+  margin: 0px 20px;
+}
+
+.testimonial > img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+.testimonial > p {
+  margin-bottom: 40px;
+}
+
+/* GALLERY------------- */
+
+.pageGallery {
+  display: flex;
+}
+
+.pageGallery > img {
+  width: 25%;
+}
+
+/* FOOTER --------------- */
+
+.pageFooter {
+  background-color: hsl(168, 50%, 72%);
+  padding-top: 70px;
+  text-align: center;
+}
+
+.pageFooter nav {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.pageFooter nav > a {
+  margin-right: 25px;
+  text-decoration: none;
+  color: hsl(168, 34%, 41%);
+  transition: 0.4s;
+}
+
+.pageFooter nav > a:hover {
+  color: #fff;
+}
+
+.pageFooter .iconsBox {
+  padding-bottom: 40px;
+}
+
+.iconsBox img {
+  margin-right: 15px;
+}
+
+.hamburgerBtn {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .pageNav {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    display: none;
+  }
+  .hamburgerBtn {
+    display: block;
+  }
+
+  .pageBanner {
+    background-image: url(./images/mobile/image-header.jpg);
+    gap: 50px;
+  }
+
+  .bannerTitle {
+    text-align: center;
+    font-size: 42px;
+    width: 85%;
+    margin-top: 225px;
+  }
+
+  .testimonialsWrapper {
+    gap: 70px;
+  }
+
+  .pageDesign {
+    flex-direction: column;
+    min-height: 900px;
+  }
+
+  .pageAbout {
+    flex-direction: column-reverse;
+  }
+
+  .aboutRight,
+  .audienceLeft {
+    flex: initial;
+    height: 350px;
+  }
+
+  .aboutLeft,
+  .audienceRight {
+    padding: 30px 0px;
+  }
+
+  .aboutLeft .info,
+  .audienceRight .info {
+    width: 80%;
+    text-align: center;
+  }
+
+  .pageAudience {
+    flex-direction: column;
+  }
+
+  .pageGallery {
+    flex-wrap: wrap;
+  }
+
+  .pageGallery img {
+    width: 50%;
+  }
+
+  .info p, .info h3 {
+    text-align: center;
+  }
+}
